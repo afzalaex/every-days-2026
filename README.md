@@ -2,6 +2,10 @@
 
 Daily p5.js sketches for the 2026 Every Days collection.
 
+## Usage
+The artworks in this repo are released under [CC0](https://creativecommons.org/public-domain/cc0/).
+No rights reserved. Use, remix, and build freely.
+
 ## What This Repo Does
 - stores the live sketch source files used by `/every-days`
 - one sketch file per artwork id
