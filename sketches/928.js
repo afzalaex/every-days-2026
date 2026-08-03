@@ -5,13 +5,23 @@ const OFFSET = (SIZE - ART) / 2;
 const CELLS = 25;
 const CELL = ART / CELLS;
 
+let viewScale;
+
+function computeScale() {
+  viewScale = Math.min(windowWidth, windowHeight, SIZE) / SIZE;
+}
+
 function setup() {
-  createCanvas(SIZE, SIZE);
+  computeScale();
+  createCanvas(SIZE * viewScale, SIZE * viewScale);
   noLoop();
 }
 
 function draw() {
   background(0);
+
+  scale(viewScale);
+
   noStroke();
 
   const a = random(TWO_PI);
@@ -40,5 +50,11 @@ function draw() {
 }
 
 function mousePressed() {
+  redraw();
+}
+
+function windowResized() {
+  computeScale();
+  resizeCanvas(SIZE * viewScale, SIZE * viewScale);
   redraw();
 }
