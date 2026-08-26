@@ -67,12 +67,6 @@ function mousePressed() {
   generate();
 }
 
-function keyPressed() {
-  if (key === " ") {
-    generate();
-  }
-}
-
 function windowResized() {
   viewScale = min(min(windowWidth, windowHeight), SIZE) / SIZE;
   resizeCanvas(SIZE * viewScale, SIZE * viewScale);
